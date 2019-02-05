@@ -1,3 +1,44 @@
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rowImg {
+  display: flex;
+  flex-wrap: wrap;
+}
+.side {
+  flex: 70%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.main {
+  flex: 30%;
+  background-color: white;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/* Footer */
+#PageFooter {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+
+/*f-------------------------------------------  */
 body {
   margins:auto;
   width:100%;
@@ -63,8 +104,8 @@ nav a {
   padding:5px;
 }
 .box {
-  float: left;
-  width: 33.33%;
+  width: 30%;
+  height: 30%;
   padding: 10px;
 }
 .imageComments {
@@ -75,12 +116,17 @@ nav a {
   font-size: 1vw;
 }
 #mainImage {
-  width:90%;
-  height: 40%;
+  width:100%;
+  height: 70%;
 }
 
 .clearfix{
   content: "";
   clear: both;
   display: table;
+}
+.flex-container {
+  display: -webkit-flex; /_ Safari _/
+  display: flex;
+  flex-direction:row;
 }
