@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<p>Skittles</p>
+	<p>Fear</p>
+	<p>Anger</p>
+
+	<script>
+		var paragraphs = document.body.getElementsByTagName("p");
+		//inserts last paragraph before first
+		document.body.insertBefore(paragraphs[2], paragraphs[0]);
+
+		//document.body.innerHTML = "<p> Well that was usefull </p>";
+
+	//	var newPara = document.createTextNode("A Jedi craves no these things");
+	//	document.body.appendChild(newPara);
+
+
+		var newPara = document.createElement("p");
+		var text = document.createTextNode("A Jedi craves not these things");
+		newPara.appendChild(text);
+		document.body.appendChild(newPara);
+
+		var container = document.getElementsByTagName("body")[0];
+		var firstButton = container.getElementsByTagName("p")[1];
+		var newCrap = document.createTextNode("Aggression");
+                container.replaceChild(newCrap, firstButton);
+	</script>
+</body>
+</html>
