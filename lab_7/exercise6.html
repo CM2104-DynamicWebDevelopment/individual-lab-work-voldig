@@ -1,17 +1,22 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Notes</title>
-	</head>
 	<body>
-		<h1>Enter something to add to a list</h1>
-		<form name='search' method="get" onsubmit="add()" action="id="search">
-		<input type="text" name="note" size="50">
-		<input type="submit" name="sumbit" value="Add">
+		<form>
+			<input type="text" name="name" id="uniqueID" value="value" />
+			<button type="button" onclick="add()">Click Me!</button>
 		</form>
 		<div id="content">
-		</div>
-	</body>
 
+		</div>
+		<script>
+			function add() {
+				var ul = document.createElement('ul');
+				item = document.createElement('li');
+				item.innerHTML = document.getElementById("uniqueID").value;
+				ul.appendChild(item);
+				document.getElementById("content").appendChild(ul);
+			}    
+		</script>
+	</body>
 </html>
+
