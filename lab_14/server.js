@@ -5,10 +5,10 @@ var express = require('express');
 	
 
 	var client = new Twitter({
-		consumer_key: 
-		consumer_secret:
-		access_token_key:
-		access_token_secret:
+		consumer_key: "U5b0iyQZEdTj5aQ3NzVeh8jxS"; 
+		consumer_secret: "Jtbk8gC5ra94tkdhQTdbVexx35nDL1EjHuvl4w2LGbknE2jRR4"
+		access_token_key: "1109036022015381505-yhTpfIGLNUUcUkyYSKuo8vkH37etfK"
+		access_token_secret: "mlxj3ZPGUlYEMtH3aMXyMvcDuZdreKd5BPyAzgkmjzre8"
 	});
 	
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
