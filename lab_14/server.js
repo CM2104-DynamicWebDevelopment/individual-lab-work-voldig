@@ -11,23 +11,22 @@ var express = require('express');
 		access_token_secret: "mlxj3ZPGUlYEMtH3aMXyMvcDuZdreKd5BPyAzgkmjzre8"
 	});
 
-	client.get('statuses/user_timeline', params, function(error, tweets, response) {
-		if(!error) {
-			 var output ="";
-			 for(var t =0; t < tweets.length; t++){
-			 	output +="<div>";
-				output +="<h2>"+ tweets[t].user.screen_name +"<h2>";
-				output +="<p>"+ tweets[t].text +"</p>";
-				output +="</div>";
-			}
-			response.send(output);
-		}
-	});
+
 
 	app.use(express.static('public')); //all static html stuff is in folder public
 
 	app.get('/', function(req, res){
-		res.send("Hello world! by express");
+		client.get('statuses/user_timeline', params, function(error, tweets, response) {
+			if(!error) {
+				 var output ="";
+				 for(var t =0; t < tweets.length; t++){
+				 	output +="<div>";
+					output +="<h2>"+ tweets[t].user.screen_name +"<h2>";
+					output +="<p>"+ tweets[t].text +"</p>";
+					output +="</div>";
+				}
+			}
+		});
 	});
 
 	app.listen(8080);
