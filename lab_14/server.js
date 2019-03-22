@@ -5,9 +5,9 @@ var express = require('express');
 	
 
 	var client = new Twitter({
-		consumer_key: "U5b0iyQZEdTj5aQ3NzVeh8jxS"; 
-		consumer_secret: "Jtbk8gC5ra94tkdhQTdbVexx35nDL1EjHuvl4w2LGbknE2jRR4"
-		access_token_key: "1109036022015381505-yhTpfIGLNUUcUkyYSKuo8vkH37etfK"
+		consumer_key: "U5b0iyQZEdTj5aQ3NzVeh8jxS", 
+		consumer_secret: "Jtbk8gC5ra94tkdhQTdbVexx35nDL1EjHuvl4w2LGbknE2jRR4",
+		access_token_key: "1109036022015381505-yhTpfIGLNUUcUkyYSKuo8vkH37etfK",
 		access_token_secret: "mlxj3ZPGUlYEMtH3aMXyMvcDuZdreKd5BPyAzgkmjzre8"
 	});
 	
@@ -24,7 +24,7 @@ var express = require('express');
 		}
 	});
 
-	app.use(express.static('public'))
+	app.use(express.static('public')); //all static html stuff is in folder public
 	
 	app.get('/', function(req, res){
 		res.send("Hello world! by express");
