@@ -20,7 +20,7 @@ var express = require('express');
 				output +="<p>"+ tweets[t].text +"</p>";
 				output +="</div>";
 			}
-			res.send(output);
+			response.send(output);
 		}
 	});
 
