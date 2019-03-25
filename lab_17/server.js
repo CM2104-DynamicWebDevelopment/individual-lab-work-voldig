@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 
 // indes page
 app.get('/', function(req, res) {
-  res.render('page/index');
+  res.render('pages/index');
 });
 
 //about pages
