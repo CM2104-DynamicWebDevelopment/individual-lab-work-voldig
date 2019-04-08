@@ -4,7 +4,8 @@
   "description": "lab 14 with twitter",
   "main": "server.js",
   "scripts": {
-    "test": "echo"
+    "test": "echo",
+    "start": "node server.js"
   },
   "keywords": [
     "twitter"
@@ -14,5 +15,6 @@
   "dependencies": {
     "express": "^4.16.4",
     "twitter": "^1.7.1"
-  }
+  },
+  "devDependencies": {}
 }
