@@ -4,29 +4,54 @@
    <head>
      <% include ../partials/head %>
    </head>
-   <body class="container">
-      <header>
-        <% include ../partials/header %>
-      </header>
-      <main>
-         <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
-            <h2>Variable</h2>
-            <p><%= tagline %></p>
-            <h2>Loop</h2>
-            <ul>
-              <% drinks.forEach(function(drink) { %>
-                <li>
-                  <%= drink.name %> -
-                  <%= drink.drunkness %>
-                </li>
-              <% }); %>
-            </ul>
+   <body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <!-- <% include ../partials/navbar %> -->
+       </nav>
+       <!--This is the section with circles, they are styled only with css, no js here-->
+       <section class="container" id='circleInterface'><!--New id circleInterface -->
+         <h2>Current readings for your location:</h2>
+         <div class="touple">
+           <div class="circle"><p>synch <span>location</span> <span class="green">good</span></p></div>
          </div>
-      </main>
-      <footer>
-        <% include ../partials/footer %>
-      </footer>
+         <div class="touple">
+           <div class="circle"><p>cloud <span>coverage</span> <span id="cloud" class="orange">mild</span></p></div>
+         </div>
+         <div class="touple">
+           <div class="circle"><p>temperature <span class="purple" id="temp">0&#176;C</span></p></div>
+         </div>
+         <div class="touple">
+           <div class="circle"><p>Meteor <span>chance</span> <span class="orange">20%</span></p></div>
+         </div>
+         <div class="touple">
+           <div class="circle"><p>Possible <span>weather</span> <span id="weather" class="red">snow</span></p></div>
+         </div>
+         <div class="touple">
+           <div class="circle"><p>Eclipse <span id='eclipseid' class="yellow">2143D</span></p></div>
+         </div>
+       </section>
+       <!--This is the map - all the JS here is only to handle the map-->
+       <section id="mapBox">
+         <h2>Best places for observation in your area:</h2>
+         <div id="map"></div>
+             <!--this script is hendling both location and weather API  -->
+             <script src="js/location.js"></script>
+       </section>
+         <section class="container" id="aboutPage">
+         <div class="columnright">
+           <h1>Eclipism</h1>
+         </div>
+         <div class="columnleft">
+             <p> This website focuses on mapping possible aurora locations and giving live feed on technical weather information<p>
+         </div>
+       </section>
+       <footer>
+           <p>&#169;
+           <a href="#">Stuart Blaxter</a>
+           <a href="#">Rami Amer</a>
+           <a href="#">Grzegorz Bronka</a>
+           <a href="#">Sam Black</a>
+           </p>
+       </footer>
    </body>
 </html>
