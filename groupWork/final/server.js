@@ -6,20 +6,12 @@ var app = express();
 app.set('view engine', 'ejs');
 
 
-// const mongoose = require('mongoose');
-//
-//
-// mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
-//     .then(() => 'You are now connected to Mongo!')
-//     .catch(err => console.error('Something went wrong', err))
+const mongoose = require('mongoose');
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // we're connected!
-});
+
+mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
+    .then(() => 'You are now connected to Mongo!')
+    .catch(err => console.error('Something went wrong', err))
 
 
 
