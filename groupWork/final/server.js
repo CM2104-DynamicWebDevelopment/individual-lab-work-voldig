@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/eclipsim', { useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err))
 
@@ -31,7 +31,7 @@ app.get('/about', function(req, res) {
 
 
 app.get('/posts/new', (req, res) => {
-    res.render('addPoint.ejs')
+    res.render('pages/addPoint.ejs')
 });
 
 
