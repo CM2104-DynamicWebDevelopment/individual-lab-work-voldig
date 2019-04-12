@@ -54,7 +54,7 @@
   // for (var i = 0; i < point.length; i++) {
   //   console.log(point);
   // }
-}
+// }
 // function getRandomPlace(min, max) {
 //   return ((Math.random() * (max - min) ) + min) / 10;
 // }
