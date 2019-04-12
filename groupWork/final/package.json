@@ -1,0 +1,28 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "package for the Eclipsim site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-work-r-d.git"
+  },
+  "keywords": [
+    "aurora",
+    "weather"
+  ],
+  "author": "Greg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-work-r-d/issues"
+  },
+  "homepage": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-work-r-d#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

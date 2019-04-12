@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>                                     <!--Non slim version needed for fade in to work-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Jquery-->
+  	<script src="script.js"></script>
+
+   <!-- Map - change later for better one-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!----------------------------->
+    <!--Bootstrap stuff - now bootstrap is used only for navbar-->
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!----------------------------->
+    <!--Custom css link-->
+    <link rel="stylesheet" href="main.css">
+
+
+
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!--Navbar is only setion that is using bootstrap  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active"  onclick="go()" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="btn2" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="btn1" href="#">Map</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--This is the section with circles, they are styled only with css, no js here-->
+    <section class="container" id='circleInterface'>                                                               <!--New id circleInterface -->
+      <article class="smallColumn touple">
+        <div class="circle"><p>synch <span>location<span> <span class="green">good</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>cloud <span>coverage</span> <span class="orange">mild</span></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>temperature <span class="purple">6&#176;C</span></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Meteor <span>chance<span> <span class="orange">20%</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Possible <span>weather</span> <span class="red">snow</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Eclipse <span id='eclipseid' class="yellow">2143D</span></p></div>
+      </article>
+    </section>
+    <!--This is the map - all the JS here is only to handle the map-->
+    <section class="mapBox">
+      <div id='map'></div>
+      <script>
+          mapboxgl.accessToken = 'pk.eyJ1Ijoidm9sZGlnIiwiYSI6ImNqcnkzY25wZjBvcmM0NG9jdncybmd5cTQifQ.1OIcdR85QpsmyPALkbNRGA';
+          const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/voldig/cjry5ef0b1ii91fqmgcx3tm77',
+              center: [-2.078393, 57.107765],
+              zoom: 10.8
+          });
+      </script>
+    </section>
+    <footer>
+        <!--We can change it later to our names-->
+        <p>&copy; Footer</p>
+    </footer>
+</body>
+</html>
