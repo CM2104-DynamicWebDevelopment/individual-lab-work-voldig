@@ -1,5 +1,5 @@
       //our map is using Mapbox API - https://www.mapbox.com/
-      function myFunction(alert('doing something!'));
+      function myFunction(){alert('doing something!')};
       var called = false; // to control calls to randomMarker method
       if (!mapboxgl.supported()) {
         alert('Your browser does not support Mapbox GL - OUR MAP WONT\'T WORK');
