@@ -16,7 +16,7 @@
   <ul>
   <% posts.forEach(function(post) { %>
     <li>
-      <p> <% myFunction(post.latitude,post.longitude) %> </p>
+      <p> <% myFunction(%> <%= post.latitude %> <% , %> <%= post.longitude %> <%)%> </p>
     </li>
     <% }); %>
   </ul>
