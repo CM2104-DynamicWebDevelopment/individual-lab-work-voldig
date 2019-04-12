@@ -44,7 +44,7 @@ app.get('/points/new', function(req, res) {
 });
 app.post('/points/store', function(req, res) {
     //console.log(req.body)
-    Point.create(req.body, function(error, post) {
+    Point.create(req.body, function(error, point) {
         res.redirect('/')
     })
 });
