@@ -1,8 +1,9 @@
 // server.js
 // load the things we need
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');//this is module for "talking" to mongoDB. It makes Mongo bahave in more structured way
 const bodyParser = require('body-parser');
+const Post = require('./database/models/Post'); //thats where the point model is(basically what data)
 
 
 const app = express();
@@ -11,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/eclipsim', { useNewUrlParser: true }
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err))
 
-
+// from the labs - ejs templating engine
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.json())
@@ -38,12 +39,14 @@ app.get('/about', function(req, res) {
 });
 
 
-app.get('/points/new', (req, res) => {
+app.get('/points/new', function(req, res) {
     res.render('pages/addPoint.ejs')
 });
-app.post('/points/store', (req, res) => {
-    console.log(req.body)
-    res.redirect('/')
+app.post('/points/store', function(req, res) {
+    //console.log(req.body)
+    Point.create(req.body, function(error, post) {
+        res.redirect('/')
+    })
 });
 
 
