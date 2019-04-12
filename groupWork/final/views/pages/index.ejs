@@ -16,10 +16,11 @@
   <ul>
   <% posts.forEach(function(post) { %>
     <li>
-      <p> <% myFunction(%> <%= post.latitude %> <% , %> <%= post.longitude %> <% ) %> </p>
+      <script>myFunction(<%= post.latitude+", "+post.longitude %>);</script>
     </li>
     <% }); %>
   </ul>
+
 </section>
 
 
