@@ -36,10 +36,10 @@
         var lng = userlocation.coords.longitude;
         console.log(lat + "    " + lng);
         getWeather(lat, lng);
-        if(!called) {
-          randomMarker(lat, lng);//seting up markers pointing to best view points
-          called = true;
-        }
+        // if(!called) {
+        //   randomMarker(lat, lng);//seting up markers pointing to best view points
+        //   called = true;
+        // }
 
 
         });
