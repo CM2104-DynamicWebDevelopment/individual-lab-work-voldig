@@ -3,7 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');//this is module for "talking" to mongoDB. It makes Mongo bahave in more structured way
 const bodyParser = require('body-parser');
-const Post = require('./database/models/Point'); //thats where the point model is(basically what data)
+const Point = require('./database/models/Point'); //thats where the point model is(basically what data)
 
 
 const app = express();
