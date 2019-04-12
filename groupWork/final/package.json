@@ -23,6 +23,7 @@
   "homepage": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-work-r-d#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongodb": "^2.2.3"
   }
 }

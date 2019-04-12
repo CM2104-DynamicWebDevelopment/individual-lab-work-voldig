@@ -1,59 +1,72 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-<head>
-<% include ../partials/head %>
-</head>
-<body>
-  <div class="container">
+<div class="container">
+
     <div class="row">
+
       <div class="col-lg-8 col-md-10 mx-auto">
+
         <div class="page-heading">
-          <h1>Create New View Point</h1>
+
+          <h1>Create New Post</h1>
+
         </div>
+
       </div>
+
     </div>
-  <section class="container">
+<div class="container">
+
   <div class="row">
+
     <div class="col-md-8 offset-md-2">
+
       <form action="/posts/store" method="POST">
+
         <div class="control-group">
+
           <div class="form-group floating-label-form-group controls">
+
             <label>Title</label>
+
             <input type="text" name="title" placeholder="Title" class="form-control">
+
           </div>
+
         </div>
+
         <div class="control-group">
+
           <div class="form-group floating-label-form-group controls">
+
             <label>Description</label>
+
             <input type="text" name="description" placeholder="Description" class="form-control">
+
           </div>
+
         </div>
+
         <div class="control-group">
+
           <div class="form-group floating-label-form-group controls">
-            <label>Latitude</label>
-            <input type="text name="latitude" placeholder="Latitude" class="form-control">
+
+            <label>Content</label>
+
+            <textarea name="content" placeholder="Content ..." cols="30" rows="10" class="form-control"></textarea>
+
           </div>
+
         </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls">
-            <label>Longitude</label>
-            <input type="text name="longitude" placeholder="Longitude" class="form-control">
-          </div>
-        </div>
+
         <div class="form-group my-4 text-center">
+
           <button class="btn btn-primary">Create Post</button>
+
         </div>
+
       </form>
+
     </div>
+
   </div>
-</section>
-  <footer>
-      <% include ../partials/footer%>
-  </footer>
-</body>
-</html>
+
+</div>

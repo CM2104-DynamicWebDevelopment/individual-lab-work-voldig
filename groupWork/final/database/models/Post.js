@@ -1,12 +1,23 @@
 const mongoose = require('mongoose');
 
-const PointSchema = new mongoose.Schema({
+ 
+
+const PostSchema = new mongoose.Schema({
+
     title: String,
+
     description: String,
-    latitude: Number,
-    longitude: Number
+
+    content: String
+
 });
 
-const Point = mongoose.model('Point', PointSchema);
+ 
 
-module.exports = Point;
+const Post = mongoose.model('Post', PostSchema);
+
+ 
+
+module.exports = Post;
+
+
