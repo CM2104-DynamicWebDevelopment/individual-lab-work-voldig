@@ -44,20 +44,20 @@
 
         });
 //this is just simulating best places for observation by seting up random places in the area of the user
-async function randomMarker(lat, lng){
-  for(var x = 0; x < 5; x++){
-    new mapboxgl.Marker()
-    .setLngLat([lng + getRandomPlace(-1,1), lat - getRandomPlace(-1,1)])
-    .addTo(map);
-  }
+// function randomMarker(lat, lng){
+//   for(var x = 0; x < 5; x++){
+//     new mapboxgl.Marker()
+//     .setLngLat([lng + getRandomPlace(-1,1), lat - getRandomPlace(-1,1)])
+//     .addTo(map);
+//   }
   // const point = await Point.find({})
   // for (var i = 0; i < point.length; i++) {
   //   console.log(point);
   // }
 }
-function getRandomPlace(min, max) {
-  return ((Math.random() * (max - min) ) + min) / 10;
-}
+// function getRandomPlace(min, max) {
+//   return ((Math.random() * (max - min) ) + min) / 10;
+// }
 function myFunction(lat, lng){
   new mapboxgl.Marker()
   .setLngLat([lng, lat])
