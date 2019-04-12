@@ -13,13 +13,7 @@
     <!--This is the section with circles, they are styled only with css, no js here-->
 
 <section>
-  <ul>
-  <% posts.forEach(function(post) { %>
-    <li>
-      <script>myFunction(<%= post.latitude+", "+post.longitude %>);</script>
-    </li>
-    <% }); %>
-  </ul>
+
 
 </section>
 
@@ -54,6 +48,13 @@
       <div id="map"></div>
           <!--this script is hendling both location and weather API  -->
           <script src="/js/location.js"></script>
+          <ul>
+          <% posts.forEach(function(post) { %>
+            <li>
+              <script>myFunction(<%= post.latitude+", "+post.longitude %>);</script>
+            </li>
+            <% }); %>
+          </ul>
     </section>
       <section class="container" id="aboutPage">
       <div class="columnright">
