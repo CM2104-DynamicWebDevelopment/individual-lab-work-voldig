@@ -13,8 +13,8 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('pages/about');
 });
-//without that css was not fetched. Found that on https://stackoverflow.com/questions/49595938/error-comes-when-try-to-link-add-css-to-ejs-file
-// app.use('/css', express.static('css'));
+// this one line is important, without it css and js can't be fetch - https://stackoverflow.com/questions/26019456/external-js-in-an-ejs-template
 app.use(express.static(__dirname));
+
 app.listen(8080);
 console.log('8080 is the magic port');
