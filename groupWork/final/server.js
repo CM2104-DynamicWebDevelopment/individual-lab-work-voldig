@@ -21,7 +21,7 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 app.get('/points/new', function(req, res) {
-    res.render('addPoint')
+    res.render('pages/addPoint')
 });
 // this one line is important, without it css and js can't be fetch - https://stackoverflow.com/questions/26019456/external-js-in-an-ejs-template
 app.use(express.static(__dirname));
