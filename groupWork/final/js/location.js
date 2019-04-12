@@ -52,7 +52,7 @@ async function randomMarker(lat, lng){
   // const point = await Point.find({})
   // for (var i = 0; i < point.length; i++) {
   //   alert(point);
-  }
+  //}
 }
 function getRandomPlace(min, max) {
   return ((Math.random() * (max - min) ) + min) / 10;
