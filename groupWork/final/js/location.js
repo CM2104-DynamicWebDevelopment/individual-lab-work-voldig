@@ -1,23 +1,5 @@
       //our map is using Mapbox API - https://www.mapbox.com/
-
-
-
-
-
-
-myFunction(alert('doing something!'));
-
-
-
-
-
-
-
-
-
-
-
-
+      
       var called = false; // to control calls to randomMarker method
       if (!mapboxgl.supported()) {
         alert('Your browser does not support Mapbox GL - OUR MAP WONT\'T WORK');
@@ -70,8 +52,8 @@ async function randomMarker(lat, lng){
   }
   // const point = await Point.find({})
   // for (var i = 0; i < point.length; i++) {
-  //   alert(point);
-  //}
+  //   console.log(point);
+  // }
 }
 function getRandomPlace(min, max) {
   return ((Math.random() * (max - min) ) + min) / 10;
