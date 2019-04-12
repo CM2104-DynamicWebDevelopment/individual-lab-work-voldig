@@ -26,10 +26,6 @@ app.get('/about', function(req, res) {
 });
 
 
-
-
-
-
 app.get('/posts/new', (req, res) => {
     res.render('pages/addPoint.ejs')
 });
