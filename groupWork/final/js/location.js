@@ -1,9 +1,9 @@
       //our map is using Mapbox API - https://www.mapbox.com/
-      function myFunction(){alert('doing something!')};
       var called = false; // to control calls to randomMarker method
       if (!mapboxgl.supported()) {
         alert('Your browser does not support Mapbox GL - OUR MAP WONT\'T WORK');
       } else {
+        function myFunction(){alert('doing something!')};
         //basic map settings
         mapboxgl.accessToken = 'pk.eyJ1Ijoidm9sZGlnIiwiYSI6ImNqcnkzY25wZjBvcmM0NG9jdncybmd5cTQifQ.1OIcdR85QpsmyPALkbNRGA';
         const map = new mapboxgl.Map({
