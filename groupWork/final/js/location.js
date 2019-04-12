@@ -59,8 +59,9 @@ function getRandomPlace(min, max) {
   return ((Math.random() * (max - min) ) + min) / 10;
 }
 function myFunction(lat, lng){
-  new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
-  alert('doing something!')
+  new mapboxgl.Marker()
+  .setLngLat([lng, lat])
+  .addTo(map);
 };
 
 
