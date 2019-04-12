@@ -13,7 +13,11 @@ mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true 
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err))
 
- 
+
+
+
+
+
 // use res.render to load up an ejs view file
 // index page
 app.get('/', function(req, res) {
@@ -23,6 +27,33 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('pages/about');
 });
+
+
+
+
+
+
+app.get('/posts/new', (req, res) => {
+    res.render('addPoint.ejs')
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // this one line is important, without it css and js can't be fetch - https://stackoverflow.com/questions/26019456/external-js-in-an-ejs-template
 app.use(express.static(__dirname));
 
