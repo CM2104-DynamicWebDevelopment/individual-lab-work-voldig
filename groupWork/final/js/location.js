@@ -1,5 +1,5 @@
       //our map is using Mapbox API - https://www.mapbox.com/
-
+      const Point = require('./database/models/Point');
       var called = false; // to control calls to randomMarker method
       if (!mapboxgl.supported()) {
         alert('Your browser does not support Mapbox GL - OUR MAP WONT\'T WORK');
