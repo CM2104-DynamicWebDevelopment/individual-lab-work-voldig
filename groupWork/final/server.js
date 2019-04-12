@@ -1,17 +1,29 @@
 // server.js
 // load the things we need
-var express = require('express');
-var app = express();
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
-
+const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
+
+const app = express();
 
 mongoose.connect('mongodb://localhost:27017/eclipsim', { useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err))
+
+
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+
+
+
+
+
 
 
 
@@ -26,10 +38,13 @@ app.get('/about', function(req, res) {
 });
 
 
-app.get('/posts/new', (req, res) => {
+app.get('/points/new', (req, res) => {
     res.render('pages/addPoint.ejs')
 });
-
+app.post('/points/store', (req, res) => {
+    console.log(req.body)
+    res.redirect('/')
+});
 
 
 
