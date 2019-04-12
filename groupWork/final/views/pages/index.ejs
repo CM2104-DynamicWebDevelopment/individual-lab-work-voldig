@@ -48,13 +48,10 @@
       <div id="map"></div>
           <!--this script is hendling both location and weather API  -->
           <script src="/js/location.js"></script>
-          <ul>
+          <!-- clumsy script to add points to the map -->
           <% posts.forEach(function(post) { %>
-            <li>
               <script>myFunction(<%= post.latitude+", "+post.longitude %>);</script>
-            </li>
             <% }); %>
-          </ul>
     </section>
       <section class="container" id="aboutPage">
       <div class="columnright">
