@@ -13,10 +13,13 @@
     <!--This is the section with circles, they are styled only with css, no js here-->
 
 <section>
+  <ul>
   <% posts.forEach(function(post) { %>
     <li>
       <p> <%= post.title %> </p>
     </li>
+    <% }); %>
+  </ul>
 </section>
 
 
