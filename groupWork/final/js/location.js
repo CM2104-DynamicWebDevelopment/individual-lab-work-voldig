@@ -51,7 +51,7 @@ async function randomMarker(lat, lng){
   //   .addTo(map);
   // }
   const point = await Point.find({})
-  for each (point in points) {
+  for (var i = 0; i < point.length; i++) {
     console.log(point);
   }
 }
