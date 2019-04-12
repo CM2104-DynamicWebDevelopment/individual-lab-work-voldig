@@ -13,6 +13,6 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('pages/about');
 });
-
+app.use('/css', express.static('css'));
 app.listen(8080);
 console.log('8080 is the magic port');
