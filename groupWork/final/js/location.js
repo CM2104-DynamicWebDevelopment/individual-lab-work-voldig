@@ -3,7 +3,7 @@
       if (!mapboxgl.supported()) {
         alert('Your browser does not support Mapbox GL - OUR MAP WONT\'T WORK');
       } else {
-        function myFunction(){alert('doing something!')};
+
         //basic map settings
         mapboxgl.accessToken = 'pk.eyJ1Ijoidm9sZGlnIiwiYSI6ImNqcnkzY25wZjBvcmM0NG9jdncybmd5cTQifQ.1OIcdR85QpsmyPALkbNRGA';
         const map = new mapboxgl.Map({
@@ -58,6 +58,10 @@ async function randomMarker(lat, lng){
 function getRandomPlace(min, max) {
   return ((Math.random() * (max - min) ) + min) / 10;
 }
+function myFunction(lat, lng){
+  new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+  alert('doing something!')
+};
 
 
 //getting weather using openweathermap API
