@@ -30,8 +30,11 @@ app.use(bodyParser.urlencoded({
 
 // use res.render to load up an ejs view file
 // index page
-app.get('/', function(req, res) {
- res.render('pages/index');
+app.get('/', async (req, res) => {
+    const posts = await Point.find({})
+    res.render('pages/index', {
+        posts
+    })
 });
 // about page
 app.get('/about', function(req, res) {

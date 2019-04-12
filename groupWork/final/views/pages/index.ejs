@@ -11,6 +11,18 @@
 <body>
     <% include ../partials/navbar %>
     <!--This is the section with circles, they are styled only with css, no js here-->
+
+<section>
+  <% posts.forEach(function(post) { %>
+    <li>
+      <p> <%= post.title %> </p>
+    </li>
+</section>
+
+
+
+
+
     <section class="container" id='circleInterface'><!--New id circleInterface -->
       <h2>Current readings for your location:</h2>
       <div class="touple">
