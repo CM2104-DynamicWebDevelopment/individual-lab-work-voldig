@@ -11,16 +11,6 @@
 <body>
     <% include ../partials/navbar %>
     <!--This is the section with circles, they are styled only with css, no js here-->
-
-<section>
-
-
-</section>
-
-
-
-
-
     <section class="container" id='circleInterface'><!--New id circleInterface -->
       <h2>Current readings for your location:</h2>
       <div class="touple">
@@ -48,7 +38,7 @@
       <div id="map"></div>
           <!--this script is hendling both location and weather API  -->
           <script src="/js/location.js"></script>
-          <!-- clumsy script to add points to the map -->
+          <!-- clumsy script to add points to the map. Server side script is fetching data from MongoDB and sending to site, EJS here is looping over it and calling function from location.js -->
           <% posts.forEach(function(post) { %>
               <script>myFunction(<%= post.latitude+", "+post.longitude %>);</script>
             <% }); %>
