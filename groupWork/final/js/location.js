@@ -59,13 +59,10 @@
 //   return ((Math.random() * (max - min) ) + min) / 10;
 // }
 function myFunction(title, lat, lng){
-  // create the popup
-  var popup = new mapboxgl.Popup({ offset: 25 })
-  .setText(title);
-
 
   new mapboxgl.Marker()
-  .setLngLat([lng, lat]).setPopup(popup)
+  .setLngLat([lng, lat]).setPopup(new mapboxgl.Popup({ offset: 25 })
+  .setText(title);)
   .addTo(map);
 };
 
