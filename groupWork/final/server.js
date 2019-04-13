@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({
 app.get('/', async (req, res) => {
     const posts = await Point.find({})
     res.render('pages/index', {
-        posts
+        points //points data is send to site
     })
 });
 // about page
