@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({
 // use res.render to load up an ejs view file
 // index page
 app.get('/', async (req, res) => {
-    const posts = await Point.find({})
+    const points = await Point.find({})
     res.render('pages/index', {
         points //points data is send to site
     })
