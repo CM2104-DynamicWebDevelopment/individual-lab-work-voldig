@@ -28,7 +28,7 @@ app.use(expressSession({
         mongooseConnection: mongoose.connection
     }),
     proxy: false,
-    resave: true,
+    resave: false,
     saveUninitialized: true
 }));
 // from the labs - ejs templating engine
