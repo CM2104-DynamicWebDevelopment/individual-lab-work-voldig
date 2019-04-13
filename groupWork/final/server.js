@@ -101,7 +101,7 @@ app.post('/users/login', function(req, res){
             bcrypt.compare(password, user.password, (error, same) => {
                 if (same) {
                     // store user session.
-                    req.session.userId = user._id
+                    // req.session.userId = user._id
                     res.redirect('/')
                 } else {
                     res.redirect('/auth/login')
