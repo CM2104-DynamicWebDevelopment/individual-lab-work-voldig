@@ -22,15 +22,10 @@ app.use(bodyParser.urlencoded({
 
 
 
+const storePoint = require('./middleware/storePoint')
+app.use('/points/store', storePoint)
 
-
-
-
-
-
-// use res.render to load up an ejs view file
-// index page
-app.get('/', async (req, res) => {
+app.get('/', async function(req, res) {
     const points = await Point.find({})
     res.render('pages/index', {
         points //points data is send to site
