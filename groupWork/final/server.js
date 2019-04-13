@@ -17,15 +17,15 @@ mongoose.connect('mongodb://localhost:27017/eclipsim', { useNewUrlParser: true }
 
 const mongoStore = connectMongo(expressSession);
 
-app.use(expressSession({
-    secret: 'secret',
-    store: new mongoStore({
-        mongooseConnection: mongoose.connection
-    }),
-    // resave: false,
-    // saveUninitialized: true,
-    // cookie: { secure: true }
-}));
+// app.use(expressSession({
+//     secret: 'secret',
+//     store: new mongoStore({
+//         mongooseConnection: mongoose.connection
+//     }),
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { secure: true }
+// }));
 
 // from the labs - ejs templating engine
 app.set('view engine', 'ejs');
