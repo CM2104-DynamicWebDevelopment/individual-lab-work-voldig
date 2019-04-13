@@ -22,9 +22,9 @@ app.use(expressSession({
     store: new mongoStore({
         mongooseConnection: mongoose.connection
     }),
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
+    // resave: false,
+    // saveUninitialized: true,
+    // cookie: { secure: true }
 }));
 
 // from the labs - ejs templating engine
