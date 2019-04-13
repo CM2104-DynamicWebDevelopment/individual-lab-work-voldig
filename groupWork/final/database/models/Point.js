@@ -10,9 +10,7 @@ const PointSchema = new mongoose.Schema({
         type: Date,
         default: new Date()
     }
-
 });
-
 
 const Point = mongoose.model('Point', PointSchema);
 
