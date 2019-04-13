@@ -68,11 +68,11 @@ app.post('/points/store', function(req, res) {
 });
 
 //registration routes
-app.get("/auth/register", function(req, res){
+app.get('/auth/register', function(req, res){
   res.render('pages/register');
 });
 
-app.post("/users/register", function(req, res){
+app.post('/users/register', function(req, res){
   User.create(req.body, function(error, user) {
       if (error) {
           return res.redirect('/auth/register')
