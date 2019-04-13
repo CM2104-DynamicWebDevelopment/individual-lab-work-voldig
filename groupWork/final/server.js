@@ -27,9 +27,9 @@ app.use(expressSession({
     store: new mongoStore({
         mongooseConnection: mongoose.connection
     }),
-    proxy: false,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: { secure: true }
 }));
 // from the labs - ejs templating engine
 app.set('view engine', 'ejs');
