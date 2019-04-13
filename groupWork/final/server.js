@@ -26,7 +26,10 @@ app.use(expressSession({
     secret: 'secret',
     store: new mongoStore({
         mongooseConnection: mongoose.connection
-    })
+    }),
+    proxy: false,
+    resave: true,
+    saveUninitialized: true
 }));
 // from the labs - ejs templating engine
 app.set('view engine', 'ejs');
