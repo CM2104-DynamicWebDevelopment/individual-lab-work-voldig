@@ -11,6 +11,7 @@ const connectMongo = require('connect-mongo');
 
 const app = express();
 
+const mongoStore = connectMongo(expressSession);
 app.use(expressSession({
     secret: 'secret',
     store: new mongoStore({
@@ -25,8 +26,6 @@ app.use(expressSession({
 mongoose.connect('mongodb://localhost:27017/eclipsim', { useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err))
-
-const mongoStore = connectMongo(expressSession);
 
 
 // from the labs - ejs templating engine
