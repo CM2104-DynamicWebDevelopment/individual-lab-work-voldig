@@ -77,6 +77,7 @@ app.get('/auth/register', function(req, res){
 app.post('/users/register', function(req, res){
   User.create(req.body, function(error, user) {
       if (error) {
+          console.log(error)
           return res.redirect('/auth/register')
       }
       res.redirect('/')
@@ -104,6 +105,7 @@ app.post('/users/login', function(req, res){
                     // req.session.userId = user._id
                     res.redirect('/')
                 } else {
+                    console.log(error)
                     res.redirect('/auth/login')
                 }
             })
