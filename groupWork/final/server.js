@@ -52,7 +52,10 @@ app.get('/about', function(req, res) {
 });
 
 
-app.get('/points/new', function(req, res) {
+
+const auth = require("./middleware/auth");
+
+app.get('/points/new', auth, function(req, res) {
   //checking if user is logged in, if not redirect to login page
   if (req.session.userId) {
       return res.render('pages/addPoint');
