@@ -40,7 +40,7 @@
           <script src="/js/location.js"></script>
           <!-- clumsy script to add points to the map. Server side script is fetching data from MongoDB and sending to site, EJS here is looping over it and calling function from location.js -->
           <% points.forEach(function(point) { %>
-              <script>myFunction(String.raw(<%= point.title %>) <%= ", "+point.latitude+", "+point.longitude %>);</script>
+              <script>myFunction(<%- point.title %> <%= ", "+point.latitude+", "+point.longitude %>);</script>
             <% }); %>
     </section>
       <section class="container" id="aboutPage">
