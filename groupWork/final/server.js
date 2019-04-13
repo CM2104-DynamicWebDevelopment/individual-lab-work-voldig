@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');//this is module for "talking" to mongoDB. It makes Mongo bahave in more structured way
 const bodyParser = require('body-parser');
 const Point = require('./database/models/Point'); //thats where the point model is(basically what data)
-const bcrypt = require('bcrypt') //for encryption of the passwords
+const bcrypt = require('bcryptjs') //for encryption of the passwords
 const expressSession = require('express-session');//persistent logins
 const connectMongo = require('connect-mongo');
 
