@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-work-r-d#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.16.1",
     "mongodb": "^3.2.3",
     "mongoose": "^4.13.18"
   }
