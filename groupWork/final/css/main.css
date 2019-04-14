@@ -117,6 +117,10 @@ footer a {
 .yellow {
 	color: #FFDE59;
 }
-
+/*to make point on the map black text (default for the map is white)*/
+.mapboxgl-popup {
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+color: black;
+}
 
 /**********************************************************************/
